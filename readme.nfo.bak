@@ -1,0 +1,7 @@
+In order to run, follow these steps:
+
+- Create the sakila database.
+- Create the sakila data warehouse database
+- Open the project, go into Project.params and complete the names of the server and databases accordingly.
+- Go into the data flows, and where you see a Destination operation, open it and click the second New button (for the table). 
+This will give you a script. Change the name to the original one (should be Dim(SomeEntity)). Hopefully this creates the table for you.
