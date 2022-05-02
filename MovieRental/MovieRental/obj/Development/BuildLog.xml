@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>MovieRental</Name>
-    <LastWriteTime>2022-04-29T22:21:49.2779324Z</LastWriteTime>
+    <LastWriteTime>2022-05-02T18:18:31.5173539Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -22,8 +22,8 @@
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>PackageSlowlyChanging.dtsx</Name>
-      <LastWriteTime>2022-04-29T23:49:55.7836912Z</LastWriteTime>
+      <Name>PackageSlowlyChangingType2.dtsx</Name>
+      <LastWriteTime>2022-05-02T18:33:24.2802943Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
