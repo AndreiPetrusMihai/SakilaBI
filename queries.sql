@@ -1,8 +1,13 @@
 select * from customer
 select * from DimCustomer
 
+select * from store
+select * from DimStore
+
 select * from film
 select * from DimFilm
+
+select * from FactCustomersPerStore
 
 delete from AddressSC
 

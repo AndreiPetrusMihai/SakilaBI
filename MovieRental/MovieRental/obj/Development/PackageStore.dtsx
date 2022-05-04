@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="4/15/2022 10:37:38 AM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="28"
-  DTS:VersionGUID="{2EABDDC3-1D92-40BF-ACB6-966A475A1569}">
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{7D25B560-6C2C-492C-A934-AAE84785B52A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4814,9 +4814,9 @@
               startId="Package\Create DimStore\Stores Staff Join.Outputs[Merge Join Output]" />
             <path
               refId="Package\Create DimStore.Paths[OLE DB Source Output5]"
-              endId="Package\Create DimStore\Sort by CityId 1.Inputs[Sort Input]"
+              endId="Package\Create DimStore\Sort By CityId.Inputs[Sort Input]"
               name="OLE DB Source Output"
-              startId="Package\Create DimStore\Address.Outputs[OLE DB Source Output]" />
+              startId="Package\Create DimStore\City.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Create DimStore.Paths[OLE DB Source Output3]"
               endId="Package\Create DimStore\Sort Staff By Store.Inputs[Sort Input]"
@@ -4824,9 +4824,9 @@
               startId="Package\Create DimStore\Staff.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Create DimStore.Paths[OLE DB Source Output4]"
-              endId="Package\Create DimStore\Sort By CityId.Inputs[Sort Input]"
+              endId="Package\Create DimStore\Sort by CityId 1.Inputs[Sort Input]"
               name="OLE DB Source Output"
-              startId="Package\Create DimStore\City.Outputs[OLE DB Source Output]" />
+              startId="Package\Create DimStore\Address.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Create DimStore.Paths[OLE DB Source Output1]"
               endId="Package\Create DimStore\Sort by FilmId 2.Inputs[Sort Input]"
@@ -4834,59 +4834,59 @@
               startId="Package\Create DimStore\Inventory.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Create DimStore.Paths[OLE DB Source Output]"
-              endId="Package\Create DimStore\Sort by FilmId.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Create DimStore\Film.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Create DimStore.Paths[OLE DB Source Output2]"
               endId="Package\Create DimStore\Sort Stores.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\Create DimStore\Store.Outputs[OLE DB Source Output]" />
             <path
+              refId="Package\Create DimStore.Paths[OLE DB Source Output2]"
+              endId="Package\Create DimStore\Sort by FilmId.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Create DimStore\Film.Outputs[OLE DB Source Output]" />
+            <path
               refId="Package\Create DimStore.Paths[Sort Output8]"
-              endId="Package\Create DimStore\Merge Join.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\Create DimStore\Sort By AddressId 1.Outputs[Sort Output]" />
-            <path
-              refId="Package\Create DimStore.Paths[Sort Output]"
-              endId="Package\Create DimStore\Merge Join.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\Create DimStore\Sort By AddressId.Outputs[Sort Output]" />
-            <path
-              refId="Package\Create DimStore.Paths[Sort Output1]"
-              endId="Package\Create DimStore\Store Film Join.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\Create DimStore\Sort By StoreId 2.Outputs[Sort Output]" />
-            <path
-              refId="Package\Create DimStore.Paths[Sort Output2]"
-              endId="Package\Create DimStore\Stores Staff Join.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\Create DimStore\Sort Staff By Store.Outputs[Sort Output]" />
-            <path
-              refId="Package\Create DimStore.Paths[Sort Output3]"
-              endId="Package\Create DimStore\Store Film Join.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\Create DimStore\Sort By StoreId.Outputs[Sort Output]" />
-            <path
-              refId="Package\Create DimStore.Paths[Sort Output4]"
-              endId="Package\Create DimStore\Film Inventory Merge.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\Create DimStore\Sort by FilmId.Outputs[Sort Output]" />
-            <path
-              refId="Package\Create DimStore.Paths[Sort Output5]"
-              endId="Package\Create DimStore\City Address Join.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\Create DimStore\Sort By CityId.Outputs[Sort Output]" />
-            <path
-              refId="Package\Create DimStore.Paths[Sort Output6]"
               endId="Package\Create DimStore\City Address Join.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Create DimStore\Sort by CityId 1.Outputs[Sort Output]" />
             <path
-              refId="Package\Create DimStore.Paths[Sort Output7]"
+              refId="Package\Create DimStore.Paths[Sort Output]"
               endId="Package\Create DimStore\Stores Staff Join.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Create DimStore\Sort Stores.Outputs[Sort Output]" />
+            <path
+              refId="Package\Create DimStore.Paths[Sort Output1]"
+              endId="Package\Create DimStore\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Create DimStore\Sort By AddressId 1.Outputs[Sort Output]" />
+            <path
+              refId="Package\Create DimStore.Paths[Sort Output2]"
+              endId="Package\Create DimStore\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Create DimStore\Sort By AddressId.Outputs[Sort Output]" />
+            <path
+              refId="Package\Create DimStore.Paths[Sort Output3]"
+              endId="Package\Create DimStore\Store Film Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Create DimStore\Sort By StoreId 2.Outputs[Sort Output]" />
+            <path
+              refId="Package\Create DimStore.Paths[Sort Output4]"
+              endId="Package\Create DimStore\Stores Staff Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Create DimStore\Sort Staff By Store.Outputs[Sort Output]" />
+            <path
+              refId="Package\Create DimStore.Paths[Sort Output5]"
+              endId="Package\Create DimStore\Store Film Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Create DimStore\Sort By StoreId.Outputs[Sort Output]" />
+            <path
+              refId="Package\Create DimStore.Paths[Sort Output6]"
+              endId="Package\Create DimStore\Film Inventory Merge.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Create DimStore\Sort by FilmId.Outputs[Sort Output]" />
+            <path
+              refId="Package\Create DimStore.Paths[Sort Output7]"
+              endId="Package\Create DimStore\City Address Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Create DimStore\Sort By CityId.Outputs[Sort Output]" />
             <path
               refId="Package\Create DimStore.Paths[Sort Output9]"
               endId="Package\Create DimStore\Film Inventory Merge.Inputs[Merge Join Right Input]"
@@ -5107,41 +5107,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create DimStore.Paths[Sort Output8]"
-          TopLeft="671.045454545455,896.545454545455">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="204.530303030303,94.3636363636361"
-              Start="0,0"
-              End="204.530303030303,86.8636363636361">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,51.929814865985" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,51.929814865985"
-                    Point2="0,55.929814865985"
-                    Point3="4,55.929814865985" />
-                  <mssgle:LineSegment
-                    End="200.530303030303,55.929814865985" />
-                  <mssgle:CubicBezierSegment
-                    Point1="200.530303030303,55.929814865985"
-                    Point2="204.530303030303,55.929814865985"
-                    Point3="204.530303030303,59.929814865985" />
-                  <mssgle:LineSegment
-                    End="204.530303030303,86.8636363636361" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Create DimStore.Paths[Sort Output7]"
+          Id="Package\Create DimStore.Paths[Sort Output]"
           TopLeft="254.5,284.363636363636">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5175,7 +5141,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create DimStore.Paths[Sort Output6]"
+          Id="Package\Create DimStore.Paths[Sort Output8]"
           TopLeft="1481.95454545455,763.818181818182">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5209,7 +5175,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create DimStore.Paths[Sort Output5]"
+          Id="Package\Create DimStore.Paths[Sort Output7]"
           TopLeft="1207.45454545455,757.454545454546">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5243,7 +5209,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create DimStore.Paths[Sort Output4]"
+          Id="Package\Create DimStore.Paths[Sort Output6]"
           TopLeft="707.954545454546,312.909090909091">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5277,7 +5243,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create DimStore.Paths[Sort Output3]"
+          Id="Package\Create DimStore.Paths[Sort Output5]"
           TopLeft="831.863636363636,555.636363636364">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5311,7 +5277,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create DimStore.Paths[Sort Output2]"
+          Id="Package\Create DimStore.Paths[Sort Output4]"
           TopLeft="511.742424242424,284.727272727273">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5333,7 +5299,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create DimStore.Paths[Sort Output1]"
+          Id="Package\Create DimStore.Paths[Sort Output3]"
           TopLeft="481.818181818182,557.454545454546">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5367,7 +5333,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create DimStore.Paths[Sort Output]"
+          Id="Package\Create DimStore.Paths[Sort Output2]"
           TopLeft="1119.68181818182,901.090909090909">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5401,19 +5367,31 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create DimStore.Paths[OLE DB Source Output5]"
-          TopLeft="1480.88636363636,642.909090909091">
+          Id="Package\Create DimStore.Paths[Sort Output1]"
+          TopLeft="671.045454545455,896.545454545455">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,78.9090909090911"
+              EndConnector="204.530303030303,94.3636363636361"
               Start="0,0"
-              End="0,71.4090909090911">
+              End="204.530303030303,86.8636363636361">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,71.4090909090911" />
+                    End="0,51.929814865985" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,51.929814865985"
+                    Point2="0,55.929814865985"
+                    Point3="4,55.929814865985" />
+                  <mssgle:LineSegment
+                    End="200.530303030303,55.929814865985" />
+                  <mssgle:CubicBezierSegment
+                    Point1="200.530303030303,55.929814865985"
+                    Point2="204.530303030303,55.929814865985"
+                    Point3="204.530303030303,59.929814865985" />
+                  <mssgle:LineSegment
+                    End="204.530303030303,86.8636363636361" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5423,7 +5401,85 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create DimStore.Paths[OLE DB Source Output4]"
+          Id="Package\Create DimStore.Paths[OLE DB Source Output]"
+          TopLeft="246,207">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.5,35.363636363636"
+              Start="0,0"
+              End="8.5,27.863636363636">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.681818181818" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.681818181818"
+                    Point2="0,17.681818181818"
+                    Point3="4,17.681818181818" />
+                  <mssgle:LineSegment
+                    End="4.5,17.681818181818" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.5,17.681818181818"
+                    Point2="8.5,17.681818181818"
+                    Point3="8.5,21.681818181818" />
+                  <mssgle:LineSegment
+                    End="8.5,27.863636363636" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Create DimStore.Paths[OLE DB Source Output2]"
+          TopLeft="708.931818181818,210.181818181818">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.7272727272727"
+              Start="0,0"
+              End="0,53.2272727272727">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.2272727272727" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Create DimStore.Paths[OLE DB Source Output1]"
+          TopLeft="921.318181818182,212">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.0909090909091"
+              Start="0,0"
+              End="0,49.5909090909091">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5909090909091" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Create DimStore.Paths[OLE DB Source Output5]"
           TopLeft="1204.34090909091,642.909090909091">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5479,75 +5535,19 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Create DimStore.Paths[OLE DB Source Output2]"
-          TopLeft="246,207">
+          Id="Package\Create DimStore.Paths[OLE DB Source Output4]"
+          TopLeft="1480.88636363636,642.909090909091">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="8.5,35.363636363636"
+              EndConnector="0,78.9090909090911"
               Start="0,0"
-              End="8.5,27.863636363636">
+              End="0,71.4090909090911">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.681818181818" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.681818181818"
-                    Point2="0,17.681818181818"
-                    Point3="4,17.681818181818" />
-                  <mssgle:LineSegment
-                    End="4.5,17.681818181818" />
-                  <mssgle:CubicBezierSegment
-                    Point1="4.5,17.681818181818"
-                    Point2="8.5,17.681818181818"
-                    Point3="8.5,21.681818181818" />
-                  <mssgle:LineSegment
-                    End="8.5,27.863636363636" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Create DimStore.Paths[OLE DB Source Output1]"
-          TopLeft="921.318181818182,212">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,57.0909090909091"
-              Start="0,0"
-              End="0,49.5909090909091">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.5909090909091" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Create DimStore.Paths[OLE DB Source Output]"
-          TopLeft="708.931818181818,210.181818181818">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.7272727272727"
-              Start="0,0"
-              End="0,53.2272727272727">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,53.2272727272727" />
+                    End="0,71.4090909090911" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
