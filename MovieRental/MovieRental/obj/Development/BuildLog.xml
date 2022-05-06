@@ -2,33 +2,33 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>MovieRental</Name>
-    <LastWriteTime>2022-05-04T09:09:40.6582381Z</LastWriteTime>
+    <LastWriteTime>2022-05-06T10:09:59.6694105Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>PackageCustomer.dtsx</Name>
-      <LastWriteTime>2022-04-29T20:38:33.0058743Z</LastWriteTime>
+      <LastWriteTime>2022-05-06T09:23:19.3848579Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>PackageFilm.dtsx</Name>
-      <LastWriteTime>2022-04-29T21:53:10.7394188Z</LastWriteTime>
+      <LastWriteTime>2022-05-06T08:53:24.0916879Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>PackageSlowlyChangingType2.dtsx</Name>
-      <LastWriteTime>2022-05-04T08:25:43.5908691Z</LastWriteTime>
+      <LastWriteTime>2022-05-06T08:53:24.0936889Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>PackageStore.dtsx</Name>
-      <LastWriteTime>2022-05-04T08:30:21.1311762Z</LastWriteTime>
+      <LastWriteTime>2022-05-06T10:09:59.6554075Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>PackageFactCustomersPerStore.dtsx</Name>
-      <LastWriteTime>2022-05-04T08:46:50.3726458Z</LastWriteTime>
+      <LastWriteTime>2022-05-06T09:33:04.0013488Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

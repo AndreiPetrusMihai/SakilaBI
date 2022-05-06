@@ -11,11 +11,35 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="21"
-  DTS:VersionGUID="{ECC3C57C-5262-468C-9CC4-9D950D185198}">
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{4EF3E69E-3E13-4AED-91F6-78D6F7C92676}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-GCMU4VS.sakila]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6BEFFA8F-4747-4918-85C4-6F7918D71E47}"
+      DTS:ObjectName="DESKTOP-GCMU4VS.sakila">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-GCMU4VS;Initial Catalog=sakila;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-GCMU4VS.sakilaDW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{CF8D04B9-5DFB-47D3-BAA2-394EB0123E49}"
+      DTS:ObjectName="DESKTOP-GCMU4VS.sakilaDW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-GCMU4VS;Initial Catalog=sakilaDW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-PJ3UB62.lab2_sakila]"
       DTS:CreationName="OLEDB"
@@ -1334,7 +1358,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[DimCustomer]</property>
+                  name="OpenRowset">[DimCustomer]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1377,8 +1401,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow for Customer table\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-PJ3UB62.sakilaDW]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-PJ3UB62.sakilaDW]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-GCMU4VS.sakilaDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-GCMU4VS.sakilaDW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1614,7 +1638,7 @@
                     <externalMetadataColumn
                       refId="Package\Data Flow for Customer table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[full_address]"
                       dataType="wstr"
-                      length="230"
+                      length="287"
                       name="full_address" />
                   </externalMetadataColumns>
                 </input>
@@ -1695,8 +1719,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow for Customer table\OLE DB Source - Address.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-PJ3UB62.lab2_sakila]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-PJ3UB62.lab2_sakila]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-GCMU4VS.sakila]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-GCMU4VS.sakila]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1957,8 +1981,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow for Customer table\OLE DB Source - City.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-PJ3UB62.lab2_sakila]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-PJ3UB62.lab2_sakila]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-GCMU4VS.sakila]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-GCMU4VS.sakila]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2123,8 +2147,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow for Customer table\OLE DB Source - Country.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-PJ3UB62.lab2_sakila]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-PJ3UB62.lab2_sakila]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-GCMU4VS.sakila]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-GCMU4VS.sakila]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2271,8 +2295,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow for Customer table\OLE DB Source - Customer.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-PJ3UB62.lab2_sakila]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-PJ3UB62.lab2_sakila]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-GCMU4VS.sakila]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-GCMU4VS.sakila]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4497,7 +4521,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{F3B15D78-385D-4882-9FAC-15F6E8BBB690}"
+          SQLTask:Connection="{CF8D04B9-5DFB-47D3-BAA2-394EB0123E49}"
           SQLTask:SqlStatementSource="truncate table DimCustomer;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -4525,27 +4549,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="216.8,41.6"
+          Size="217,42"
           Id="Package\Data Flow for Customer table"
           TopLeft="325.000005534717,253.117650608703" />
         <NodeLayout
-          Size="344.8,41.6"
+          Size="345,42"
           Id="Package\Execute SQL for Customer table - truncate DimCustomer"
-          TopLeft="263.571433060023,111.647060389337" />
+          TopLeft="263.571433060023,110.647060389337" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="434.68571929737,153.247060389337">
+          TopLeft="434.78571929737,152.647060389337">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,99.8705902193657"
+              EndConnector="0,100.470590219366"
               Start="0,0"
-              End="0,92.3705902193657">
+              End="0,92.970590219366">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,92.3705902193657" />
+                    End="0,92.970590219366" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4563,43 +4587,91 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="204.8,41.6"
-          Id="Package\Data Flow for Customer table\OLE DB Source - Customer"
-          TopLeft="29,54.5384615384615" />
+          Size="190,42"
+          Id="Package\Data Flow for Customer table\inner join by country_id"
+          TopLeft="822.5,428.75" />
         <NodeLayout
-          Size="196.8,41.6"
-          Id="Package\Data Flow for Customer table\OLE DB Source - Address"
-          TopLeft="272.307692307692,53.8461538461538" />
-        <NodeLayout
-          Size="177.6,41.6"
-          Id="Package\Data Flow for Customer table\OLE DB Source - City"
-          TopLeft="510.769230769231,52.3076923076923" />
-        <NodeLayout
-          Size="196.8,41.6"
+          Size="197,42"
           Id="Package\Data Flow for Customer table\OLE DB Source - Country"
           TopLeft="723.846153846154,53.8461538461538" />
         <NodeLayout
-          Size="214.4,41.6"
+          Size="205,42"
+          Id="Package\Data Flow for Customer table\OLE DB Source - Customer"
+          TopLeft="29,54.5384615384615" />
+        <NodeLayout
+          Size="214,42"
           Id="Package\Data Flow for Customer table\Sort Customer by address_id"
           TopLeft="27.3076923076923,139.711538461538" />
         <NodeLayout
-          Size="138.4,41.6"
+          Size="200,42"
+          Id="Package\Data Flow for Customer table\new column - full address"
+          TopLeft="817.5,552.5" />
+        <NodeLayout
+          Size="138,42"
+          Id="Package\Data Flow for Customer table\Sort Country"
+          TopLeft="760,138.727272727273" />
+        <NodeLayout
+          Size="118,42"
+          Id="Package\Data Flow for Customer table\Sort City"
+          TopLeft="539.230769230769,135.384615384615" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Data Flow for Customer table\OLE DB Source - City"
+          TopLeft="509.769230769231,50.3076923076923" />
+        <NodeLayout
+          Size="197,42"
+          Id="Package\Data Flow for Customer table\OLE DB Source - Address"
+          TopLeft="272.307692307692,53.8461538461538" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Data Flow for Customer table\Sort by country_id"
+          TopLeft="520.909090909091,425.454545454545" />
+        <NodeLayout
+          Size="146,42"
+          Id="Package\Data Flow for Customer table\Sort by city_id"
+          TopLeft="184.615384615385,319.230769230769" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow for Customer table\inner join by city_id"
+          TopLeft="514.405594405594,323.496503496504" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Data Flow for Customer table\OLE DB Destination"
+          TopLeft="836.25,647.5" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Data Flow for Customer table\inner join by address_id"
+          TopLeft="154.615384615385,229.230769230769" />
+        <NodeLayout
+          Size="138,42"
           Id="Package\Data Flow for Customer table\Sort Address"
           TopLeft="308.461538461539,141.538461538462" />
         <EdgeLayout
-          Id="Package\Data Flow for Customer table.Paths[OLE DB Source Output]"
-          TopLeft="132.953846153846,96.1384615384615">
+          Id="Package\Data Flow for Customer table.Paths[Sort Output5]"
+          TopLeft="828.8,180.327272727273">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,43.5730769230769"
+              EndConnector="88.9,248.422727272727"
               Start="0,0"
-              End="0,36.0730769230769">
+              End="88.9,240.922727272727">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.0730769230769" />
+                    End="0,120.211363636364" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,120.211363636364"
+                    Point2="0,124.211363636364"
+                    Point3="4,124.211363636364" />
+                  <mssgle:LineSegment
+                    End="84.9,124.211363636364" />
+                  <mssgle:CubicBezierSegment
+                    Point1="84.9,124.211363636364"
+                    Point2="88.9,124.211363636364"
+                    Point3="88.9,128.211363636364" />
+                  <mssgle:LineSegment
+                    End="88.9,240.922727272727" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4609,19 +4681,19 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow for Customer table.Paths[OLE DB Source Output1]"
-          TopLeft="374.184615384615,95.4461538461538">
+          Id="Package\Data Flow for Customer table.Paths[Sort Output4]"
+          TopLeft="685.709090909091,447.902272727273">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,46.0923076923077"
+              EndConnector="136.790909090909,0"
               Start="0,0"
-              End="0,38.5923076923077">
+              End="129.290909090909,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.5923076923077" />
+                    End="129.290909090909,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4630,36 +4702,42 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="191.2,41.6"
-          Id="Package\Data Flow for Customer table\inner join by address_id"
-          TopLeft="154.615384615385,229.230769230769" />
         <EdgeLayout
-          Id="Package\Data Flow for Customer table.Paths[Sort Output]"
-          TopLeft="134.507692307692,181.311538461538">
+          Id="Package\Data Flow for Customer table.Paths[Sort Output3]"
+          TopLeft="599.218181818182,176.984615384615">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="85.1743589743589,47.9192307692308"
+              EndConnector="0,146.511888111888"
               Start="0,0"
-              End="85.1743589743589,40.4192307692308">
+              End="0,139.011888111888">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.5129364826045" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.5129364826045"
-                    Point2="0,28.5129364826045"
-                    Point3="4,28.5129364826045" />
+                    End="0,139.011888111888" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow for Customer table.Paths[Sort Output2]"
+          TopLeft="330.215384615385,342.163636363636">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="184.19020979021,0"
+              Start="0,0"
+              End="176.69020979021,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="81.1743589743589,28.5129364826045" />
-                  <mssgle:CubicBezierSegment
-                    Point1="81.1743589743589,28.5129364826045"
-                    Point2="85.1743589743589,28.5129364826045"
-                    Point3="85.1743589743589,32.5129364826045" />
-                  <mssgle:LineSegment
-                    End="85.1743589743589,40.4192307692308" />
+                    End="176.69020979021,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4702,128 +4780,32 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="145.6,41.6"
-          Id="Package\Data Flow for Customer table\Sort by city_id"
-          TopLeft="184.615384615385,319.230769230769" />
         <EdgeLayout
-          Id="Package\Data Flow for Customer table.Paths[Merge Join Output]"
-          TopLeft="253.815384615385,270.830769230769">
+          Id="Package\Data Flow for Customer table.Paths[Sort Output]"
+          TopLeft="134.507692307692,181.311538461538">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,48.4"
+              EndConnector="85.1743589743589,47.9192307692308"
               Start="0,0"
-              End="0,40.9">
+              End="85.1743589743589,40.4192307692308">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="118.4,41.6"
-          Id="Package\Data Flow for Customer table\Sort City"
-          TopLeft="539.230769230769,135.384615384615" />
-        <EdgeLayout
-          Id="Package\Data Flow for Customer table.Paths[OLE DB Source Output2]"
-          TopLeft="599,93.9076923076923">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,41.4769230769231"
-              Start="0,0"
-              End="0,33.9769230769231">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
+                    End="0,24.5129364826045" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.5129364826045"
+                    Point2="0,28.5129364826045"
+                    Point3="4,28.5129364826045" />
                   <mssgle:LineSegment
-                    End="0,33.9769230769231" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\Data Flow for Customer table\inner join by city_id"
-          TopLeft="514.405594405594,323.496503496504" />
-        <EdgeLayout
-          Id="Package\Data Flow for Customer table.Paths[Sort Output2]"
-          TopLeft="330.215384615385,342.163636363636">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="184.19020979021,0"
-              Start="0,0"
-              End="176.69020979021,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
+                    End="81.1743589743589,28.5129364826045" />
+                  <mssgle:CubicBezierSegment
+                    Point1="81.1743589743589,28.5129364826045"
+                    Point2="85.1743589743589,28.5129364826045"
+                    Point3="85.1743589743589,32.5129364826045" />
                   <mssgle:LineSegment
-                    End="176.69020979021,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow for Customer table.Paths[Sort Output3]"
-          TopLeft="599.218181818182,176.984615384615">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,146.511888111888"
-              Start="0,0"
-              End="0,139.011888111888">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,139.011888111888" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Data Flow for Customer table\Sort by country_id"
-          TopLeft="520.909090909091,425.454545454545" />
-        <NodeLayout
-          Size="137.6,41.6"
-          Id="Package\Data Flow for Customer table\Sort Country"
-          TopLeft="760,138.727272727273" />
-        <EdgeLayout
-          Id="Package\Data Flow for Customer table.Paths[Merge Join Output1]"
-          TopLeft="601.657342657343,365.096503496504">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.3580419580418"
-              Start="0,0"
-              End="0,52.8580419580418">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.8580419580418" />
+                    End="85.1743589743589,40.4192307692308" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4854,24 +4836,20 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="190.4,41.6"
-          Id="Package\Data Flow for Customer table\inner join by country_id"
-          TopLeft="822.5,428.75" />
         <EdgeLayout
-          Id="Package\Data Flow for Customer table.Paths[Sort Output4]"
-          TopLeft="685.709090909091,447.902272727273">
+          Id="Package\Data Flow for Customer table.Paths[OLE DB Source Output2]"
+          TopLeft="598.5,92.3076923076923">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="136.790909090909,0"
+              EndConnector="0,43.0769230769227"
               Start="0,0"
-              End="129.290909090909,0">
+              End="0,35.5769230769227">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="129.290909090909,0" />
+                    End="0,35.5769230769227" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4881,31 +4859,19 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow for Customer table.Paths[Sort Output5]"
-          TopLeft="828.8,180.327272727273">
+          Id="Package\Data Flow for Customer table.Paths[OLE DB Source Output1]"
+          TopLeft="374.184615384615,95.4461538461538">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="88.9,248.422727272727"
+              EndConnector="0,46.0923076923077"
               Start="0,0"
-              End="88.9,240.922727272727">
+              End="0,38.5923076923077">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,120.211363636364" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,120.211363636364"
-                    Point2="0,124.211363636364"
-                    Point3="4,124.211363636364" />
-                  <mssgle:LineSegment
-                    End="84.9,124.211363636364" />
-                  <mssgle:CubicBezierSegment
-                    Point1="84.9,124.211363636364"
-                    Point2="88.9,124.211363636364"
-                    Point3="88.9,128.211363636364" />
-                  <mssgle:LineSegment
-                    End="88.9,240.922727272727" />
+                    End="0,38.5923076923077" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4914,10 +4880,28 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="200,41.6"
-          Id="Package\Data Flow for Customer table\new column - full address"
-          TopLeft="817.5,552.5" />
+        <EdgeLayout
+          Id="Package\Data Flow for Customer table.Paths[OLE DB Source Output]"
+          TopLeft="132.953846153846,96.1384615384615">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.5730769230769"
+              Start="0,0"
+              End="0,36.0730769230769">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.0730769230769" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow for Customer table.Paths[Merge Join Output2]"
           TopLeft="917.6,470.35">
@@ -4940,10 +4924,50 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Data Flow for Customer table\OLE DB Destination"
-          TopLeft="836.25,647.5" />
+        <EdgeLayout
+          Id="Package\Data Flow for Customer table.Paths[Merge Join Output1]"
+          TopLeft="601.657342657343,365.096503496504">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.3580419580418"
+              Start="0,0"
+              End="0,52.8580419580418">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.8580419580418" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow for Customer table.Paths[Merge Join Output]"
+          TopLeft="253.815384615385,270.830769230769">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.4"
+              Start="0,0"
+              End="0,40.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow for Customer table.Paths[Derived Column Output]"
           TopLeft="919.475,594.1">
@@ -4970,7 +4994,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow for Customer table\OLE DB Source - Customer">
+    design-time-name="Package\Data Flow for Customer table\OLE DB Source - Country">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4983,7 +5007,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow for Customer table\OLE DB Source - Address">
+    design-time-name="Package\Data Flow for Customer table\OLE DB Source - Customer">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5009,7 +5033,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow for Customer table\OLE DB Source - Country">
+    design-time-name="Package\Data Flow for Customer table\OLE DB Source - Address">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
